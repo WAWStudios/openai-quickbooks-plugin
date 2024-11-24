@@ -9,7 +9,7 @@
   },
   "api": {
     "type": "openapi",
-    "url": "https://wawstudios.github.io/openai-quickbooks-plugin/openapi.yaml"
+    "url": "https://wawstudios.github.io/openai-quickbooks-plugin/openapi.json"
   },
   "logo_url": "https://wawstudios.github.io/openai-quickbooks-plugin/logo.png",
   "contact_email": "support@wawstudios.com",
