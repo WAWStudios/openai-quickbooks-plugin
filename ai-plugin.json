@@ -1,17 +1,18 @@
 {
   "schema_version": "v1",
+  "name_for_human": "QuickBooks Plugin",
   "name_for_model": "quickbooks_plugin",
-  "name_for_human": "QuickBooks Integration",
-  "description_for_model": "Fetch company info, VAT reports, invoices, and transactions from QuickBooks via Make.com.",
-  "description_for_human": "A plugin to integrate QuickBooks for financial data like company info, VAT reports, and invoices.",
+  "description_for_human": "Access your QuickBooks data.",
+  "description_for_model": "Allows ChatGPT to interact with your QuickBooks data.",
   "auth": {
     "type": "none"
   },
   "api": {
     "type": "openapi",
-    "url": "https://wawstudios.github.io/openai-quickbooks-plugin/openapi.json"
+    "url": "https://wawstudios.github.io/openai-quickbooks-plugin/openapi.json",
+    "is_user_authenticated": false
   },
   "logo_url": "https://wawstudios.github.io/openai-quickbooks-plugin/logo.png",
-  "contact_email": "support@wawstudios.com",
+  "contact_email": "info"waw.group",
   "legal_info_url": "https://wawstudios.com/legal"
 }
