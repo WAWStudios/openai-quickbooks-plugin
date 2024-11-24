@@ -1,0 +1,52 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "QuickBooks Plugin",
+    "version": "1.0.0",
+    "description": "Access QuickBooks data through Make.com."
+  },
+  "paths": {
+    "/vat-report": {
+      "post": {
+        "summary": "Fetch VAT report",
+        "operationId": "fetchVatReport",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "date_range": {
+                    "type": "string",
+                    "description": "Date range for the VAT report."
+                  }
+                },
+                "required": ["date_range"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "VAT report fetched successfully.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "total_sales": {
+                      "type": "number"
+                    },
+                    "vat_due": {
+                      "type": "number"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

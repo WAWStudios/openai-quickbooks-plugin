@@ -1,0 +1,17 @@
+{
+  "schema_version": "v1",
+  "name_for_model": "quickbooks_plugin",
+  "name_for_human": "QuickBooks Integration",
+  "description_for_model": "Fetch VAT reports, invoices, and transactions from QuickBooks via Make.com.",
+  "description_for_human": "A plugin to integrate QuickBooks for financial data like VAT reports and invoices.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://your-server-url.com/openapi.json"
+  },
+  "logo_url": "https://your-server-url.com/logo.png",
+  "contact_email": "support@yourdomain.com",
+  "legal_info_url": "https://yourdomain.com/legal"
+}
