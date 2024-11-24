@@ -1,0 +1,31 @@
+openapi: 3.0.1
+info:
+  title: QuickBooks Integration
+  description: API to interact with QuickBooks via Make.com Webhook.
+  version: "1.0.0"
+servers:
+  - url: "https://hook.eu2.make.com/nhvixxbgj3t340icwh9nlbnifrgfmo6t"
+paths:
+  /:
+    post:
+      summary: Trigger QuickBooks actions
+      operationId: triggerQuickBooksAction
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                action:
+                  type: string
+                  description: The action to perform (e.g., get_company_info).
+              required:
+                - action
+      responses:
+        "200":
+          description: Success response from QuickBooks.
+          content:
+            application/json:
+              schema:
+                type: object
