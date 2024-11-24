@@ -35,10 +35,60 @@
                   "type": "object",
                   "properties": {
                     "total_sales": {
-                      "type": "number"
+                      "type": "number",
+                      "description": "Total sales within the date range."
                     },
                     "vat_due": {
-                      "type": "number"
+                      "type": "number",
+                      "description": "VAT amount due."
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/get-company-info": {
+      "post": {
+        "summary": "Fetch company info",
+        "operationId": "fetchCompanyInfo",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "action": {
+                    "type": "string",
+                    "example": "get_company_info"
+                  }
+                },
+                "required": ["action"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Company info fetched successfully.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "company_name": {
+                      "type": "string",
+                      "description": "Name of the company."
+                    },
+                    "legal_name": {
+                      "type": "string",
+                      "description": "Legal name of the company."
+                    },
+                    "fiscal_year_start": {
+                      "type": "string",
+                      "description": "Month when the fiscal year starts."
                     }
                   }
                 }
