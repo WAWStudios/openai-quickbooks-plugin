@@ -9,9 +9,11 @@ MAKE_WEBHOOK_URL = os.getenv("MAKE_WEBHOOK_URL")
 
 @app.route("/vat-report", methods=["POST"])
 def fetch_vat_report():
-    # Example to confirm the endpoint works
     data = request.json
-    return jsonify({"message": "Endpoint works!", "received": data})
+    # Forward the request to the Make.com webhook
+    response = requests.post(MAKE_WEBHOOK_URL, json=data)
+    # Return the response from Make.com
+    return jsonify(response.json()), response.status_code
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
